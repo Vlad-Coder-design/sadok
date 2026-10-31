@@ -10,7 +10,8 @@ html,body{margin:0;height:100%;background:#14213D;overflow:hidden;font-family:'N
 #deck>section.on{opacity:1;visibility:visible}
 #deck section *{margin:0;box-sizing:border-box}
 #deck section{box-sizing:border-box}
-#deck section div{display:flex;flex-direction:column}
+#deck section div:not([style*="display"]){display:flex;flex-direction:column}
+#deck section>*:not([style*="position:absolute"]){position:relative}
 #deck h1{font-size:96px;font-weight:600;line-height:1.1}#deck h2{font-size:64px;font-weight:600;line-height:1.15}#deck h3{font-size:44px;font-weight:600;line-height:1.2}#deck p{font-size:32px;line-height:1.4}
 #deck a{color:inherit;text-decoration:none}
 #deck svg{display:block;flex:none}
@@ -1034,7 +1035,6 @@ html,body{margin:0;height:100%;background:#14213D;overflow:hidden;font-family:'N
 <p style="font-family:'Rubik', Arial, sans-serif;font-size:72px;font-weight:600;font-style:italic;line-height:1.15;color:#F4C95D;width:1200px">«Діти — це наше майбутнє, і воно починається вже сьогодні!»</p>
 <div style="display:flex;flex-direction:column;gap:8px">
 <p style="font-size:32px;font-weight:800">Дякую за увагу!</p>
-<p style="font-size:26px;color:#C9D3E6">[Контакти] · [посилання на сайт проєкту]</p>
 </div>
 
 </section>
