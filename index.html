@@ -1,4 +1,1056 @@
 <!doctype html>
+<html lang="uk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Дитячий садок майбутнього</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400..800&family=Nunito:wght@400..800&display=swap">
+<style>
+html,body{margin:0;height:100%;background:#14213D;overflow:hidden;font-family:'Nunito',Arial,sans-serif}
+#view{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
+#deck{position:relative;width:1920px;height:1080px;flex:none;transform-origin:center center;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+#deck>section{position:absolute;inset:0;width:1920px;height:1080px;overflow:hidden;opacity:0;visibility:hidden;transition:opacity .45s ease,visibility .45s}
+#deck>section.on{opacity:1;visibility:visible}
+#deck section *{margin:0;box-sizing:border-box}
+#deck section{box-sizing:border-box}
+#deck section div{display:flex;flex-direction:column}
+#deck h1{font-size:96px;font-weight:600;line-height:1.1}#deck h2{font-size:64px;font-weight:600;line-height:1.15}#deck h3{font-size:44px;font-weight:600;line-height:1.2}#deck p{font-size:32px;line-height:1.4}
+#deck a{color:inherit;text-decoration:none}
+#deck svg{display:block;flex:none}
+#deck hr{border:0}
+.nav{position:fixed;z-index:5;bottom:14px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:6px;padding:6px;background:rgba(20,33,61,.72);border-radius:999px;backdrop-filter:blur(6px);font:700 14px/1 'Nunito',Arial,sans-serif;color:#FBF7F0;opacity:.35;transition:opacity .3s}
+.nav:hover,.nav:focus-within{opacity:1}
+.nav button{font:inherit;color:inherit;background:transparent;border:0;border-radius:999px;padding:10px 14px;cursor:pointer}
+.nav button:hover{background:rgba(255,255,255,.14)}
+.nav button:focus-visible{outline:3px solid #F4C95D}
+#count{min-width:64px;text-align:center;font-variant-numeric:tabular-nums}
+</style></head><body>
+<div id="view"><div id="deck">
+<section id="model" data-transition="fade" style="background:linear-gradient(180deg, #BFE3F5 0%, #E4F3F8 55%, #FBF7F0 100%);color:#1F2A44;font-family:'Nunito', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;gap:28px">
+<iframe src="model.html?embed=1" title="3D-модель садочка" style="position:absolute;left:800px;top:128px;width:992px;height:824px;border:0;background:transparent" allowtransparency="true"></iframe>
+<p style="font-size:26px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:#C2581A;width:620px">Знайомтеся</p>
+<h2 style="font-family:'Rubik', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;width:620px">3D-модель садочка майбутнього</h2>
+<p style="font-size:32px;line-height:1.4;color:#3E4F66;width:600px">Екологічна, світла й безпечна територія, де все створене для дитини.</p>
+<div style="display:flex;flex-direction:column;gap:12px;width:620px">
+<div style="display:flex;flex-direction:row;align-items:center;gap:20px"><div style="width:28px;height:28px;border-radius:50%;background:#78BDE5;border:3px solid #FFFFFF"></div><p style="font-size:26px">Скляний атріум, сонячні панелі на даху</p></div>
+<div style="display:flex;flex-direction:row;align-items:center;gap:20px"><div style="width:28px;height:28px;border-radius:50%;background:#8C96A3;border:3px solid #FFFFFF"></div><p style="font-size:26px">Укриття поруч, з критим переходом</p></div>
+<div style="display:flex;flex-direction:row;align-items:center;gap:20px"><div style="width:28px;height:28px;border-radius:50%;background:#2E9BD6;border:3px solid #FFFFFF"></div><p style="font-size:26px">Басейн із шезлонгами та парасолькою</p></div>
+<div style="display:flex;flex-direction:row;align-items:center;gap:20px"><div style="width:28px;height:28px;border-radius:50%;background:#F2A07B;border:3px solid #FFFFFF"></div><p style="font-size:26px">Гойдалки, каруселька, батут, гірка</p></div>
+<div style="display:flex;flex-direction:row;align-items:center;gap:20px"><div style="width:28px;height:28px;border-radius:50%;background:#E07B4F;border:3px solid #FFFFFF"></div><p style="font-size:26px">Міністадіон, город і теплиця</p></div>
+<div style="display:flex;flex-direction:row;align-items:center;gap:20px"><div style="width:28px;height:28px;border-radius:50%;background:#79C26A;border:3px solid #FFFFFF"></div><p style="font-size:26px">Сад, квіти та зелена тераса</p></div>
+</div>
+<p style="font-size:26px;font-weight:800;color:#FBF7F0;background:#C2581A;padding:14px 28px;border-radius:40px;width:620px;text-align:center"><a href="model.html" target="_blank">Покрутити 3D-модель самостійно →</a></p>
+
+</section>
+<section id="cover" data-transition="fade" style="background:#14213D;color:#FBF7F0;font-family:'Nunito', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;gap:40px">
+<svg aria-label="Ілюстрація: інтер’єр садочка майбутнього — скляна стіна з видом на сад, світлове кільце на стелі, інтерактивна підлога, AR-екран з планетами, м’які модульні пуфи та робот-помічник" style="position:absolute;left:0px;top:0px;width:1920px;height:1080px" width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="ceil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FBF6EE"/><stop offset="1" stop-color="#EADFCD"/></linearGradient>
+<linearGradient id="lw" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#D9C6A8"/><stop offset="1" stop-color="#F3EADC"/></linearGradient>
+<linearGradient id="rw" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#F3EADC"/><stop offset="1" stop-color="#DCCBB0"/></linearGradient>
+<linearGradient id="floor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EBCDA2"/><stop offset="1" stop-color="#C08E57"/></linearGradient>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7CC6EE"/><stop offset="1" stop-color="#DDF3FB"/></linearGradient>
+<linearGradient id="scr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#101A33"/><stop offset="1" stop-color="#2B3A67"/></linearGradient>
+<linearGradient id="beam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0.35"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>
+<linearGradient id="fade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#14213D" stop-opacity="0.97"/><stop offset="0.4" stop-color="#14213D" stop-opacity="0.9"/><stop offset="0.6" stop-color="#14213D" stop-opacity="0.15"/><stop offset="0.68" stop-color="#14213D" stop-opacity="0"/></linearGradient>
+<radialGradient id="sun" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#FFF4C2"/><stop offset="0.5" stop-color="#FFE08A"/><stop offset="1" stop-color="#FFE08A" stop-opacity="0"/></radialGradient>
+<radialGradient id="robo" cx="0.35" cy="0.3" r="0.8"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#C9D3E6"/></radialGradient>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="9" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="10"/></filter>
+</defs>
+<polygon points="0,0 1920,0 1650,300 1050,300" fill="url(#ceil)"/>
+<polygon points="0,0 1050,300 1050,660 0,1080" fill="url(#lw)"/>
+<polygon points="1920,0 1650,300 1650,660 1920,1080" fill="url(#rw)"/>
+<polygon points="0,1080 1920,1080 1650,660 1050,660" fill="url(#floor)"/>
+<path d="M1050 660L350 1080M1110 660L550 1080M1170 660L750 1080M1230 660L950 1080M1290 660L1150 1080M1350 660L1350 1080M1410 660L1550 1080M1470 660L1750 1080M1530 660L1950 1080M1590 660L2150 1080M788 765L166 1080M525 870L81 1080M1785 870L2019 1080" stroke="#A9773F" stroke-opacity="0.3" stroke-width="2"/>
+<path d="M200 57V960M330 94V900M450 128V850M560 160V805M660 188V765M750 214V730M830 236V700M900 256V680M960 274V670" stroke="#C7B08C" stroke-width="10" stroke-opacity="0.6"/>
+<rect x="1060" y="306" width="580" height="348" fill="url(#sky)"/>
+<circle cx="1520" cy="390" r="90" fill="url(#sun)"/>
+<ellipse cx="1180" cy="380" rx="60" ry="18" fill="#FFFFFF" opacity="0.9"/>
+<ellipse cx="1215" cy="368" rx="38" ry="20" fill="#FFFFFF" opacity="0.9"/>
+<path d="M1060 560Q1200 470 1340 530T1640 500V654H1060Z" fill="#9BD58A"/>
+<path d="M1060 600Q1250 540 1450 590T1640 580V654H1060Z" fill="#6DBE6A"/>
+<circle cx="1420" cy="520" r="34" fill="#4FA35A"/>
+<circle cx="1450" cy="535" r="26" fill="#5DB566"/>
+<rect x="1432" y="545" width="8" height="40" fill="#7A5A3A"/>
+<circle cx="1580" cy="540" r="28" fill="#4FA35A"/>
+<rect x="1576" y="555" width="7" height="34" fill="#7A5A3A"/>
+<path d="M1205 306V654M1350 306V654M1495 306V654M1060 480H1640" stroke="#FFFFFF" stroke-width="7"/>
+<rect x="1056" y="302" width="588" height="356" fill="none" stroke="#FFFFFF" stroke-width="10"/>
+<polygon points="1180,660 1520,660 1760,1080 860,1080" fill="url(#beam)"/>
+<ellipse cx="1350" cy="150" rx="340" ry="56" fill="none" stroke="#FFD98A" stroke-width="12" filter="url(#glow)"/>
+<ellipse cx="1350" cy="150" rx="210" ry="34" fill="none" stroke="#FFE7B0" stroke-width="8" filter="url(#glow)"/>
+<ellipse cx="1150" cy="900" rx="320" ry="86" fill="#3FE0D0" opacity="0.12"/>
+<ellipse cx="1150" cy="900" rx="320" ry="86" fill="none" stroke="#3FE0D0" stroke-width="5" filter="url(#glow)"/>
+<ellipse cx="1150" cy="900" rx="220" ry="58" fill="none" stroke="#7FE7F5" stroke-width="4" filter="url(#glow)"/>
+<ellipse cx="1150" cy="900" rx="120" ry="31" fill="#3FE0D0" opacity="0.3" filter="url(#glow)"/>
+<ellipse cx="1010" cy="870" rx="22" ry="7" fill="#F4C95D" filter="url(#glow)"/>
+<ellipse cx="1300" cy="925" rx="20" ry="6" fill="#F28C38" filter="url(#glow)"/>
+<ellipse cx="1240" cy="850" rx="16" ry="5" fill="#B49CFF" filter="url(#glow)"/>
+<ellipse cx="1060" cy="950" rx="18" ry="6" fill="#FF7FA8" filter="url(#glow)"/>
+<polygon points="1690,340 1880,262 1880,667 1690,600" fill="url(#scr)"/>
+<polygon points="1690,340 1880,262 1880,667 1690,600" fill="none" stroke="#7FE7F5" stroke-width="5" filter="url(#glow)"/>
+<circle cx="1790" cy="440" r="46" fill="#F28C38"/>
+<ellipse cx="1790" cy="440" rx="80" ry="16" fill="none" stroke="#F4C95D" stroke-width="6" transform="rotate(-20 1790 440)"/>
+<circle cx="1730" cy="545" r="20" fill="#6CC3B5"/>
+<circle cx="1850" cy="560" r="12" fill="#B49CFF"/>
+<circle cx="1720" cy="390" r="3" fill="#FFFFFF"/>
+<circle cx="1855" cy="330" r="3" fill="#FFFFFF"/>
+<circle cx="1845" cy="470" r="2" fill="#FFFFFF"/>
+<circle cx="1760" cy="610" r="2" fill="#FFFFFF"/>
+<ellipse cx="1118" cy="706" rx="48" ry="10" fill="#000000" opacity="0.12"/>
+<rect x="1090" y="640" width="56" height="66" rx="12" fill="#FBF7F0"/>
+<circle cx="1118" cy="585" r="55" fill="#5DBB63"/>
+<circle cx="1082" cy="612" r="38" fill="#4CA65A"/>
+<circle cx="1156" cy="606" r="40" fill="#6FCB72"/>
+<circle cx="1120" cy="545" r="34" fill="#7DD47F"/>
+<ellipse cx="1430" cy="790" rx="80" ry="16" fill="#000000" opacity="0.12" filter="url(#soft)"/>
+<rect x="1355" y="738" width="150" height="52" rx="26" fill="#D9661F"/>
+<ellipse cx="1430" cy="742" rx="75" ry="22" fill="#F7A35C"/>
+<ellipse cx="1545" cy="838" rx="92" ry="18" fill="#000000" opacity="0.12" filter="url(#soft)"/>
+<rect x="1460" y="782" width="170" height="58" rx="29" fill="#2A9D8F"/>
+<ellipse cx="1545" cy="786" rx="85" ry="25" fill="#8FDCCF"/>
+<ellipse cx="1430" cy="1010" rx="130" ry="24" fill="#000000" opacity="0.15" filter="url(#soft)"/>
+<rect x="1305" y="930" width="250" height="80" rx="40" fill="#7C5CE0"/>
+<ellipse cx="1430" cy="936" rx="125" ry="34" fill="#B49CFF"/>
+<ellipse cx="1700" cy="965" rx="66" ry="14" fill="#000000" opacity="0.18" filter="url(#soft)"/>
+<ellipse cx="1650" cy="880" rx="14" ry="34" fill="url(#robo)" transform="rotate(25 1650 880)"/>
+<ellipse cx="1750" cy="880" rx="14" ry="34" fill="url(#robo)" transform="rotate(-25 1750 880)"/>
+<ellipse cx="1700" cy="895" rx="50" ry="64" fill="url(#robo)"/>
+<circle cx="1700" cy="885" r="11" fill="#F4C95D" filter="url(#glow)"/>
+<ellipse cx="1700" cy="808" rx="48" ry="40" fill="url(#robo)"/>
+<rect x="1664" y="790" width="72" height="34" rx="17" fill="#14213D"/>
+<ellipse cx="1686" cy="807" rx="7" ry="9" fill="#7FE7F5" filter="url(#glow)"/>
+<ellipse cx="1714" cy="807" rx="7" ry="9" fill="#7FE7F5" filter="url(#glow)"/>
+<path d="M1700 768V748" stroke="#C9D3E6" stroke-width="4"/>
+<circle cx="1700" cy="744" r="7" fill="#F28C38" filter="url(#glow)"/>
+<rect x="0" y="0" width="1920" height="1080" fill="url(#fade)"/>
+</svg>
+<p style="font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#14213D;background:#F4C95D;padding:10px 24px;border-radius:40px;width:560px;text-align:center">Інноваційний проєкт ЗДО</p>
+<div style="display:flex;flex-direction:column;gap:8px;width:820px">
+<h1 style="font-family:'Rubik', Arial, sans-serif;font-size:96px;font-weight:700;line-height:1.05">Дитячий садок майбутнього</h1>
+<h2 style="font-family:'Rubik', Arial, sans-serif;font-size:64px;font-weight:500;line-height:1.1;color:#F4C95D">простір щасливого дитинства</h2>
+</div>
+<p style="font-size:32px;line-height:1.4;color:#C9D3E6;width:800px">Інноваційний проєкт закладу дошкільної освіти (ЗДО) нового покоління</p>
+<div style="display:flex;flex-direction:column;gap:4px">
+<p style="font-size:32px;font-weight:700;color:#FBF7F0">Студентка Добжанська Крістіна Олександрівна</p>
+<p style="font-size:26px;color:#C9D3E6">Група № 3 ДО 1/3</p>
+</div>
+
+</section>
+<section id="why" data-transition="fade" style="background:#FBF7F0;color:#1F2A44;font-family:'Nunito', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:26px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:#C2581A">Чому потрібні зміни?</p>
+<h2 style="font-family:'Rubik', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1">Актуальність проєкту</h2>
+</div>
+<p style="font-size:32px;line-height:1.4;color:#4A5568;width:1300px">Світ динамічно змінюється, і традиційні підходи до дошкільної освіти потребують реформування. Ключові проблеми сьогодення, які ми вирішуємо:</p>
+<div style="display:flex;gap:32px">
+<div style="flex:1;display:flex;flex-direction:column;gap:14px;background:#FFFDF9;padding:28px;border:2px solid #EDE3D3;border-radius:24px">
+<svg aria-label="Було і стане: нудьгуюча дитина під годинником у сірій кімнаті, стрілка, і радісна дитина серед кубиків та книжок" width="440" height="120" viewBox="0 0 440 120" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="w1a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ECEEF2"/><stop offset="1" stop-color="#D5D9E0"/></linearGradient>
+<linearGradient id="w1b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF1DE"/><stop offset="1" stop-color="#FFD9B5"/></linearGradient>
+<filter id="w1s" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#1F2A44" flood-opacity="0.2"/></filter>
+<clipPath id="w1c"><rect width="440" height="120" rx="16"/></clipPath>
+</defs>
+<g clip-path="url(#w1c)">
+<rect width="220" height="120" fill="url(#w1a)"/>
+<rect x="220" width="220" height="120" fill="url(#w1b)"/>
+<rect y="104" width="440" height="16" fill="#000000" opacity="0.06"/>
+<circle cx="56" cy="36" r="20" fill="#FFFFFF" stroke="#9AA3AE" stroke-width="4"/>
+<path d="M56 36V24M56 36L65 41" stroke="#6B7280" stroke-width="3" stroke-linecap="round"/>
+<rect x="96" y="80" width="46" height="8" rx="3" fill="#9AA3AE"/>
+<path d="M100 88V106M138 88V106M134 80V52" stroke="#9AA3AE" stroke-width="4" stroke-linecap="round"/>
+<rect x="106" y="58" width="24" height="26" rx="9" fill="#AEB5C0"/>
+<circle cx="118" cy="46" r="12" fill="#DCCBBB"/>
+<path d="M112 50Q118 46 124 50" stroke="#6B7280" stroke-width="2" fill="none"/>
+<path d="M110 84L104 104M126 84L130 104" stroke="#AEB5C0" stroke-width="6" stroke-linecap="round"/>
+<g filter="url(#w1s)"><rect x="176" y="52" width="58" height="14" rx="7" fill="#F28C38"/><polygon points="228,40 256,59 228,78" fill="#F28C38"/></g>
+<g filter="url(#w1s)">
+<rect x="274" y="80" width="26" height="26" rx="5" fill="#F28C38"/>
+<rect x="302" y="80" width="26" height="26" rx="5" fill="#2A9D8F"/>
+<rect x="288" y="52" width="26" height="26" rx="5" fill="#F4C95D"/>
+<path d="M390 88L412 82L434 88V108L412 102L390 108Z" fill="#FBF7F0"/>
+<path d="M412 82V102" stroke="#E86A5E" stroke-width="3"/>
+</g>
+<path d="M354 62L340 42M378 62L392 42" stroke="#E86A5E" stroke-width="7" stroke-linecap="round"/>
+<rect x="352" y="58" width="28" height="30" rx="10" fill="#E86A5E"/>
+<path d="M358 88L354 106M374 88L378 106" stroke="#1F2A44" stroke-width="7" stroke-linecap="round"/>
+<circle cx="366" cy="44" r="13" fill="#F2C9A0"/>
+<path d="M353 42Q366 26 379 42Q366 36 353 42Z" fill="#7A5233"/>
+<path d="M360 48Q366 54 372 48" stroke="#7A5233" stroke-width="2" fill="none"/>
+<path d="M330 22L333 30L341 31L335 36L337 44L330 40L323 44L325 36L319 31L327 30Z" fill="#F4C95D"/>
+<path d="M412 20L414 26L420 27L415 30L417 36L412 33L407 36L409 30L404 27L410 26Z" fill="#F4C95D"/>
+</g>
+</svg>
+<h3 style="font-size:30px;font-weight:700;line-height:1.25">Застаріла модель «догляду та нагляду» замість всебічного розвитку</h3>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:14px;background:#FFFDF9;padding:28px;border:2px solid #EDE3D3;border-radius:24px">
+<svg aria-label="Ряд однакових сірих фігурок і одна яскрава дитина у промені світла з сердечком — кожна дитина особлива" width="440" height="120" viewBox="0 0 440 120" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="w2a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EEF0FA"/><stop offset="1" stop-color="#DCE0F0"/></linearGradient>
+<linearGradient id="w2b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF6CC" stop-opacity="0.95"/><stop offset="1" stop-color="#FFF6CC" stop-opacity="0.2"/></linearGradient>
+<filter id="w2s" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#1F2A44" flood-opacity="0.2"/></filter>
+</defs>
+<rect width="440" height="120" rx="16" fill="url(#w2a)"/>
+<polygon points="206,0 234,0 272,120 168,120" fill="url(#w2b)"/>
+<ellipse cx="60" cy="108" rx="22" ry="5" fill="#000000" opacity="0.08"/>
+<ellipse cx="140" cy="108" rx="22" ry="5" fill="#000000" opacity="0.08"/>
+<ellipse cx="300" cy="108" rx="22" ry="5" fill="#000000" opacity="0.08"/>
+<ellipse cx="380" cy="108" rx="22" ry="5" fill="#000000" opacity="0.08"/>
+<g fill="#C3C9D3">
+<circle cx="60" cy="56" r="13"/><rect x="47" y="70" width="26" height="36" rx="10"/>
+<circle cx="140" cy="56" r="13"/><rect x="127" y="70" width="26" height="36" rx="10"/>
+<circle cx="300" cy="56" r="13"/><rect x="287" y="70" width="26" height="36" rx="10"/>
+<circle cx="380" cy="56" r="13"/><rect x="367" y="70" width="26" height="36" rx="10"/>
+</g>
+<g filter="url(#w2s)">
+<rect x="205" y="68" width="30" height="38" rx="11" fill="#2A9D8F"/>
+<circle cx="220" cy="54" r="15" fill="#F2C9A0"/>
+<path d="M205 52Q220 34 235 52Q220 44 205 52Z" fill="#E0B040"/>
+<path d="M214 58Q220 63 226 58" stroke="#7A5233" stroke-width="2" fill="none"/>
+<path d="M220 30L210 20A6 6 0 0 1 220 13A6 6 0 0 1 230 20Z" fill="#E86A5E"/>
+</g>
+<circle cx="190" cy="40" r="3" fill="#F4C95D"/>
+<circle cx="252" cy="32" r="3" fill="#F4C95D"/>
+<circle cx="246" cy="62" r="2" fill="#F28C38"/>
+</svg>
+<h3 style="font-size:30px;font-weight:700;line-height:1.25">Брак індивідуального підходу до кожної дитини</h3>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:14px;background:#FFFDF9;padding:28px;border:2px solid #EDE3D3;border-radius:24px">
+<svg aria-label="Розгублений батько серед хаосу порад: телефон зі сповіщеннями, різнокольорові хмаринки зі знаками питання та заплутана лінія" width="440" height="120" viewBox="0 0 440 120" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="w3a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF0EC"/><stop offset="1" stop-color="#FCDCD3"/></linearGradient>
+<filter id="w3s" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#1F2A44" flood-opacity="0.2"/></filter>
+<path id="w3q" d="M-5,-6Q-5,-13 1,-13Q7,-13 7,-7Q7,-3 1,0V3" fill="none" stroke-width="3" stroke-linecap="round"/>
+</defs>
+<rect width="440" height="120" rx="16" fill="url(#w3a)"/>
+<path d="M150 70C120 20 90 100 60 60S20 30 40 90M290 50C330 10 350 90 380 50S420 80 400 100" fill="none" stroke="#E8A48C" stroke-width="3" stroke-linecap="round"/>
+<g filter="url(#w3s)">
+<rect x="40" y="14" width="74" height="34" rx="14" fill="#FFFFFF" transform="rotate(-8 77 31)"/>
+<rect x="320" y="12" width="80" height="34" rx="14" fill="#2A9D8F" transform="rotate(6 360 29)"/>
+<rect x="44" y="70" width="60" height="30" rx="12" fill="#F4C95D" transform="rotate(5 74 85)"/>
+<rect x="336" y="66" width="62" height="30" rx="12" fill="#B49CFF" transform="rotate(-6 367 81)"/>
+<rect x="262" y="40" width="34" height="58" rx="8" fill="#1F2A44"/>
+<rect x="267" y="47" width="24" height="42" rx="3" fill="#9ED8F0"/>
+<circle cx="294" cy="42" r="8" fill="#E86A5E"/>
+</g>
+<use href="#w3q" x="77" y="34" stroke="#E86A5E"/>
+<use href="#w3q" x="360" y="32" stroke="#FFFFFF"/>
+<use href="#w3q" x="74" y="88" stroke="#1F2A44"/>
+<use href="#w3q" x="367" y="84" stroke="#FFFFFF"/>
+<rect x="206" y="66" width="30" height="42" rx="11" fill="#7C5CE0"/>
+<path d="M208 74L192 52" stroke="#7C5CE0" stroke-width="7" stroke-linecap="round"/>
+<circle cx="221" cy="52" r="15" fill="#F2C9A0"/>
+<path d="M206 48Q221 32 236 48Q221 42 206 48Z" fill="#1F2A44"/>
+<circle cx="191" cy="50" r="5" fill="#F2C9A0"/>
+<path d="M215 60Q221 56 227 60" stroke="#7A5233" stroke-width="2" fill="none"/>
+<use href="#w3q" x="244" y="26" stroke="#F28C38"/>
+<use href="#w3q" x="200" y="22" stroke="#F28C38"/>
+</svg>
+<h3 style="font-size:30px;font-weight:700;line-height:1.25">Хаотичність батьківських знань про виховання</h3>
+</div>
+</div>
+<div style="display:flex;flex-direction:row;align-items:center;gap:32px;background:#1F2A44;padding:30px 48px;border-radius:24px">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#F4C95D;width:64px;height:64px" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+<p style="font-size:32px;line-height:1.4;color:#FBF7F0"><b>Мета проєкту:</b> створити екологічне, безпечне та інноваційне середовище, де дитина є центром освітнього процесу.</p>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:900px;font-size:24px;color:#6B7280">Дитячий садок майбутнього</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#6B7280;text-align:right">03</p>
+
+</section>
+<section id="mission" data-transition="fade" style="background:#EAF4F1;color:#1F2A44;font-family:'Nunito', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:36px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:26px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:#1F7A70">Філософія та місія</p>
+<h2 style="font-family:'Rubik', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1">Яким є садок майбутнього</h2>
+</div>
+<div style="flex:1;display:flex;flex-direction:row;gap:56px">
+<div style="flex:1;display:flex;flex-direction:column;justify-content:space-between;gap:24px">
+<div style="display:flex;flex-direction:row;align-items:center;gap:32px">
+<svg aria-label="Затишний дім із сердечком у вікні, казкова вежа з прапорцем, веселка і дитина біля вказівника з трьома стрілками — вибір шляху" width="487" height="200" viewBox="0 0 560 230" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="m1a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#CDEBF6"/><stop offset="1" stop-color="#F3FAF7"/></linearGradient>
+<linearGradient id="m1b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9BD58A"/><stop offset="1" stop-color="#6DBE5C"/></linearGradient>
+<linearGradient id="m1c" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#C9B6FF"/><stop offset="1" stop-color="#9B7BFF"/></linearGradient>
+<linearGradient id="m1d" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F7A35C"/><stop offset="1" stop-color="#E8752A"/></linearGradient>
+<filter id="m1s" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#1F2A44" flood-opacity="0.2"/></filter>
+<clipPath id="m1k"><rect width="560" height="230" rx="24"/></clipPath>
+</defs>
+<g clip-path="url(#m1k)">
+<rect width="560" height="230" fill="url(#m1a)"/>
+<path d="M300 150A90 90 0 0 1 480 150" fill="none" stroke="#E86A5E" stroke-width="10" opacity="0.7"/>
+<path d="M310 150A80 80 0 0 1 470 150" fill="none" stroke="#F4C95D" stroke-width="10" opacity="0.7"/>
+<path d="M320 150A70 70 0 0 1 460 150" fill="none" stroke="#6CC3B5" stroke-width="10" opacity="0.7"/>
+<ellipse cx="90" cy="40" rx="34" ry="12" fill="#FFFFFF"/><ellipse cx="112" cy="32" rx="22" ry="14" fill="#FFFFFF"/>
+<ellipse cx="420" cy="34" rx="30" ry="11" fill="#FFFFFF"/>
+<path d="M0 190Q140 160 280 186T560 176V230H0Z" fill="url(#m1b)"/>
+<g filter="url(#m1s)">
+<rect x="56" y="110" width="144" height="88" rx="6" fill="#FBF7F0"/>
+<polygon points="44,116 128,52 212,116" fill="url(#m1d)"/>
+<path d="M128 166L110 148A11 11 0 0 1 128 133A11 11 0 0 1 146 148Z" fill="#E86A5E"/>
+<rect x="72" y="150" width="26" height="48" rx="4" fill="#C98B52"/>
+<rect x="164" y="134" width="22" height="22" rx="4" fill="#9ED8F0"/>
+</g>
+<g filter="url(#m1s)">
+<rect x="238" y="80" width="56" height="118" rx="4" fill="url(#m1c)"/>
+<polygon points="230,84 266,22 302,84" fill="#7C5CE0"/>
+<path d="M266 22V2" stroke="#1F2A44" stroke-width="3"/>
+<polygon points="266,2 288,9 266,16" fill="#F4C95D"/>
+<path d="M256 120A10 10 0 0 1 276 120V138H256Z" fill="#FFF6CC"/>
+<path d="M256 160A10 10 0 0 1 276 160V198H256Z" fill="#7A5233"/>
+</g>
+<g filter="url(#m1s)">
+<rect x="416" y="80" width="9" height="118" rx="3" fill="#A06A3C"/>
+<polygon points="380,84 448,84 462,96 448,108 380,108" fill="#2A9D8F"/>
+<polygon points="456,114 388,114 374,126 388,138 456,138" fill="#F4C95D"/>
+<polygon points="380,144 448,144 462,156 448,168 380,168" fill="#E86A5E"/>
+</g>
+<ellipse cx="506" cy="200" rx="18" ry="5" fill="#000000" opacity="0.12"/>
+<rect x="494" y="160" width="24" height="30" rx="9" fill="#F28C38"/>
+<path d="M498 190L496 202M514 190L516 202" stroke="#1F2A44" stroke-width="6" stroke-linecap="round"/>
+<path d="M496 168L478 150" stroke="#F28C38" stroke-width="6" stroke-linecap="round"/>
+<circle cx="506" cy="146" r="13" fill="#F2C9A0"/>
+<path d="M493 144Q506 128 519 144Q506 138 493 144Z" fill="#7A5233"/>
+<path d="M330 40L333 48L341 49L335 54L337 62L330 58L323 62L325 54L319 49L327 48Z" fill="#F4C95D"/>
+<path d="M210 30L212 36L218 37L213 40L215 46L210 43L205 46L207 40L202 37L208 36Z" fill="#F4C95D"/>
+</g>
+</svg>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:26px;font-weight:800;color:#1F7A70">МІСІЯ</p>
+<p style="font-family:'Rubik', Arial, sans-serif;font-size:44px;font-weight:500;line-height:1.25">Садок майбутнього — це <span style="color:#C2581A">другий дім, казка</span> та <span style="color:#C2581A">простір усвідомленого вибору</span>.</p>
+</div>
+<div style="display:flex;flex-direction:row;align-items:center;gap:28px;background:#1F2A44;padding:32px 40px;border-radius:24px">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#F4C95D;width:56px;height:56px" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+<div style="display:flex;flex-direction:column;gap:6px">
+<p style="font-size:26px;color:#C9D3E6">Головний принцип</p>
+<p style="font-size:32px;font-weight:800;color:#FBF7F0;line-height:1.3">Не змушувати, а зацікавлювати через гру</p>
+</div>
+</div>
+</div>
+<div style="width:600px;display:flex;flex-direction:column;gap:12px">
+<p style="font-size:26px;font-weight:800;color:#1F7A70;padding:0px 0px 4px 0px">7 КЛЮЧОВИХ НАВИЧОК (SOFT SKILLS)</p>
+<div style="display:flex;flex-direction:row;align-items:center;gap:20px;background:#FBF7F0;padding:12px 28px;border-radius:40px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#D9661F;width:36px;height:36px" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg><p style="font-size:32px;font-weight:700">Допитливість</p></div>
+<div style="display:flex;flex-direction:row;align-items:center;gap:20px;background:#FBF7F0;padding:12px 28px;border-radius:40px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#D9661F;width:36px;height:36px" aria-hidden="true"><path d="M9 18h6M10 22h4M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg><p style="font-size:32px;font-weight:700">Креативність</p></div>
+<div style="display:flex;flex-direction:row;align-items:center;gap:20px;background:#FBF7F0;padding:12px 28px;border-radius:40px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#D9661F;width:36px;height:36px" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg><p style="font-size:32px;font-weight:700">Координація</p></div>
+<div style="display:flex;flex-direction:row;align-items:center;gap:20px;background:#FBF7F0;padding:12px 28px;border-radius:40px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#D9661F;width:36px;height:36px" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><p style="font-size:32px;font-weight:700">Співпраця</p></div>
+<div style="display:flex;flex-direction:row;align-items:center;gap:20px;background:#FBF7F0;padding:12px 28px;border-radius:40px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#D9661F;width:36px;height:36px" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><p style="font-size:32px;font-weight:700">Турбота</p></div>
+<div style="display:flex;flex-direction:row;align-items:center;gap:20px;background:#FBF7F0;padding:12px 28px;border-radius:40px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#D9661F;width:36px;height:36px" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg><p style="font-size:32px;font-weight:700">Здатність до змін</p></div>
+<div style="display:flex;flex-direction:row;align-items:center;gap:20px;background:#FBF7F0;padding:12px 28px;border-radius:40px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#D9661F;width:36px;height:36px" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><p style="font-size:32px;font-weight:700">Усвідомлений вибір</p></div>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:900px;font-size:24px;color:#4F6B66">Дитячий садок майбутнього</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#4F6B66;text-align:right">04</p>
+
+</section>
+<section id="architecture" data-transition="fade" style="background:#FBF7F0;color:#1F2A44;font-family:'Nunito', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:44px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:26px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:#C2581A">Зовнішній вигляд</p>
+<h2 style="font-family:'Rubik', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1">Архітектура та еко-середовище</h2>
+</div>
+<div style="flex:1;display:flex;flex-direction:row;gap:32px">
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#FFFDF9;padding:36px;border:2px solid #EDE3D3;border-radius:28px">
+<svg aria-label="Екологічна будівля садочка із сонячними панелями на даху, зеленим дахом, великими вікнами та деревом поруч" width="440" height="200" viewBox="0 0 440 200" xmlns="http://www.w3.org/2000/svg">
+<defs><linearGradient id="ag1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BFE6F7"/><stop offset="1" stop-color="#F1FAFD"/></linearGradient><filter id="as1" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#1F2A44" flood-opacity="0.22"/></filter><linearGradient id="aw1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D9F3FC"/><stop offset="1" stop-color="#78BDE5"/></linearGradient></defs>
+<rect width="440" height="200" rx="18" fill="url(#ag1)"/>
+<circle cx="380" cy="44" r="40" fill="#FFE08A" opacity="0.5"/>
+<circle cx="380" cy="44" r="22" fill="#F4C95D"/>
+<rect x="0" y="168" width="440" height="32" fill="#8BD47A"/>
+<rect x="0" y="182" width="440" height="18" rx="0" fill="#79C26A"/>
+<rect x="96" y="92" width="230" height="78" fill="#FBF7F0" filter="url(#as1)"/>
+<rect x="106" y="104" width="210" height="40" fill="url(#aw1)"/>
+<path d="M120 104L150 144H170L140 104ZM200 104L230 144H240L210 104Z" fill="#FFFFFF" opacity="0.45"/>
+<path d="M148 104V144M190 104V144M232 104V144M274 104V144" stroke="#FFFFFF" stroke-width="5"/>
+<rect x="120" y="150" width="14" height="20" fill="#C98B52"/>
+<rect x="196" y="146" width="30" height="24" rx="4" fill="#F28C38"/>
+<rect x="88" y="84" width="246" height="10" rx="3" fill="#D9A066"/>
+<rect x="250" y="74" width="80" height="10" rx="4" fill="#79C26A"/>
+<circle cx="266" cy="70" r="8" fill="#5DB566"/>
+<circle cx="300" cy="68" r="10" fill="#4CA65A"/>
+<polygon points="100,84 120,52 180,52 160,84" fill="#2C3F72" filter="url(#as1)"/>
+<polygon points="168,84 188,52 248,52 228,84" fill="#2C3F72" filter="url(#as1)"/>
+<polygon points="124,52 150,52 128,84 108,84" fill="#FFFFFF" opacity="0.18"/>
+<polygon points="192,52 218,52 196,84 176,84" fill="#FFFFFF" opacity="0.18"/>
+<path d="M110 68H170M178 68H238M140 52L130 84M208 52L198 84" stroke="#9DBCE6" stroke-width="2"/>
+<path d="M352 60L330 40M360 76L380 96" stroke="#F4C95D" stroke-width="3" opacity="0"/>
+<rect x="364" y="120" width="8" height="50" fill="#7A5233"/>
+<circle cx="368" cy="110" r="26" fill="#5DB566" filter="url(#as1)"/>
+<circle cx="352" cy="122" r="16" fill="#4CA65A"/>
+<circle cx="384" cy="120" r="16" fill="#6FCB72"/>
+<rect x="20" y="140" width="40" height="30" rx="15" fill="#5DB566"/>
+</svg>
+<h3 style="font-family:'Rubik', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.25">Концепція будівлі</h3>
+<p style="font-size:26px;line-height:1.45;color:#4A5568">Екологічність та енергоефективність: сонячні батареї, природні матеріали.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#1F2A44;padding:36px;border-radius:28px">
+<svg aria-label="Укриття в розрізі: під землею світла кімната, де діти граються та навчаються, вхід сходами з поверхні" width="440" height="200" viewBox="0 0 440 200" xmlns="http://www.w3.org/2000/svg">
+<defs><linearGradient id="ag2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C99B6C"/><stop offset="1" stop-color="#8E6440"/></linearGradient><filter id="as2" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#000000" flood-opacity="0.3"/></filter><radialGradient id="al2" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#FFE9A8" stop-opacity="0.9"/><stop offset="1" stop-color="#FFE9A8" stop-opacity="0"/></radialGradient></defs>
+<rect width="440" height="200" rx="18" fill="url(#ag2)"/>
+<rect x="0" y="0" width="440" height="44" rx="18" fill="#DDF3FB"/>
+<rect x="0" y="30" width="440" height="14" fill="#DDF3FB"/>
+<rect x="0" y="44" width="440" height="14" fill="#79C26A"/>
+<circle cx="390" cy="34" r="16" fill="#5DB566"/>
+<circle cx="340" cy="38" r="10" fill="#4CA65A"/>
+<rect x="30" y="20" width="56" height="38" rx="6" fill="#8C96A3" filter="url(#as2)"/>
+<rect x="44" y="30" width="28" height="28" fill="#3A4656"/>
+<rect x="36" y="22" width="44" height="7" rx="3" fill="#2E8B57"/>
+<polygon points="44,58 72,58 128,120 100,120" fill="#A7AFB9"/>
+<path d="M58 70H84M70 84H96M82 98H108M94 112H118" stroke="#8C96A3" stroke-width="3"/>
+<rect x="118" y="78" width="300" height="108" rx="14" fill="#FFF6E8" stroke="#8C96A3" stroke-width="7" filter="url(#as2)"/>
+<circle cx="200" cy="100" r="44" fill="url(#al2)"/>
+<circle cx="330" cy="100" r="44" fill="url(#al2)"/>
+<circle cx="200" cy="92" r="8" fill="#FFE08A"/>
+<circle cx="330" cy="92" r="8" fill="#FFE08A"/>
+<rect x="340" y="112" width="60" height="38" rx="4" fill="#2A9D8F"/>
+<path d="M352 124H388M352 134H376" stroke="#FBF7F0" stroke-width="3"/>
+<ellipse cx="240" cy="172" rx="80" ry="10" fill="#F4C95D"/>
+<circle cx="200" cy="138" r="9" fill="#F2C9A0"/>
+<rect x="192" y="148" width="16" height="22" rx="6" fill="#F28C38"/>
+<circle cx="240" cy="142" r="8" fill="#F2C9A0"/>
+<rect x="233" y="151" width="14" height="19" rx="6" fill="#7C5CE0"/>
+<circle cx="280" cy="138" r="9" fill="#F2C9A0"/>
+<rect x="272" y="148" width="16" height="22" rx="6" fill="#E86A5E"/>
+<rect x="222" y="164" width="12" height="10" rx="2" fill="#6CC3B5"/>
+<rect x="252" y="164" width="12" height="10" rx="2" fill="#F4C95D"/>
+<rect x="132" y="92" width="22" height="12" rx="3" fill="#2E8B57"/>
+</svg>
+<h3 style="font-family:'Rubik', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.25;color:#FBF7F0">Безпека перш за все</h3>
+<p style="font-size:26px;line-height:1.45;color:#C9D3E6">Сучасне інтерактивне укриття-трансформер, де діти можуть продовжувати навчання та ігри під час тривог.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#FFFDF9;padding:36px;border:2px solid #EDE3D3;border-radius:28px">
+<svg aria-label="Зелена територія: міністадіон з біговою доріжкою та воротами, дерева, клумби і лупа для вивчення природи" width="440" height="200" viewBox="0 0 440 200" xmlns="http://www.w3.org/2000/svg">
+<defs><linearGradient id="ag3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9BDB8A"/><stop offset="1" stop-color="#6DBE5C"/></linearGradient><filter id="as3" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#1F2A44" flood-opacity="0.22"/></filter></defs>
+<rect width="440" height="200" rx="18" fill="url(#ag3)"/>
+<rect x="0" y="0" width="440" height="50" rx="18" fill="#DDF3FB"/>
+<rect x="0" y="36" width="440" height="14" fill="#DDF3FB"/>
+<ellipse cx="150" cy="128" rx="128" ry="54" fill="#E07B4F" filter="url(#as3)"/>
+<ellipse cx="150" cy="128" rx="100" ry="36" fill="#79C26A"/>
+<path d="M150 92V164" stroke="#FFFFFF" stroke-width="3"/>
+<ellipse cx="150" cy="128" rx="114" ry="45" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="6 6"/>
+<path d="M60 116V140H72V116Z" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+<path d="M240 116V140H228V116Z" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+<circle cx="168" cy="132" r="6" fill="#FFFFFF"/>
+<rect x="306" y="40" width="8" height="40" fill="#7A5233"/>
+<circle cx="310" cy="34" r="24" fill="#4CA65A" filter="url(#as3)"/>
+<rect x="404" y="50" width="7" height="34" fill="#7A5233"/>
+<circle cx="408" cy="44" r="18" fill="#5DB566"/>
+<rect x="296" y="150" width="130" height="30" rx="15" fill="#6DBE5C"/>
+<circle cx="316" cy="160" r="5" fill="#F28C38"/>
+<circle cx="340" cy="168" r="5" fill="#FF8FB8"/>
+<circle cx="364" cy="158" r="5" fill="#F4C95D"/>
+<circle cx="388" cy="168" r="5" fill="#FF8FB8"/>
+<circle cx="408" cy="160" r="5" fill="#F28C38"/>
+<circle cx="360" cy="114" r="24" fill="#DDF3FB" stroke="#1F2A44" stroke-width="6" filter="url(#as3)"/>
+<path d="M352 116Q360 100 370 112Q362 124 352 116Z" fill="#5DB566"/>
+<path d="M377 131L394 148" stroke="#1F2A44" stroke-width="8" stroke-linecap="round"/>
+</svg>
+<h3 style="font-family:'Rubik', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.25">Територія</h3>
+<p style="font-size:26px;line-height:1.45;color:#4A5568">Відкритий зелений простір, міністадіон для спортивного розвитку, ландшафтні зони для вивчення природи на свіжому повітрі.</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:900px;font-size:24px;color:#6B7280">Дитячий садок майбутнього</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#6B7280;text-align:right">05</p>
+
+</section>
+<section id="zoning" data-transition="fade" style="background:#EAF4F1;color:#1F2A44;font-family:'Nunito', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:36px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:26px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:#1F7A70">Smart-інтер’єр</p>
+<h2 style="font-family:'Rubik', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1">Внутрішній простір: зонування</h2>
+</div>
+<p style="font-size:32px;line-height:1.4;color:#3E5450">Замість класичних закритих кімнат — <b style="color:#1F2A44">мобільні трансформовані зони</b>.</p>
+<div style="flex:1;display:flex;flex-direction:row;align-items:center;gap:56px">
+<div style="position:relative;width:820px;height:540px">
+<svg aria-label="Об’ємний план групи садочка майбутнього: скляна стіна, чотири відкриті зони без перегородок — гра й конструювання, медіатека, STEM-лабораторія, творча майстерня" width="820" height="540" viewBox="0 0 820 540" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<filter id="dk"><feColorMatrix type="matrix" values="0.68 0 0 0 0 0 0.68 0 0 0 0 0 0.68 0 0 0 0 0 1 0"/></filter>
+<linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#BFE9F5" stop-opacity="0.9"/><stop offset="1" stop-color="#E6F7FB" stop-opacity="0.6"/></linearGradient>
+<g id="slab" transform="translate(330 120) matrix(0.52 0.3 -0.52 0.3 0 0)"><rect x="0" y="0" width="800" height="500" rx="20"/></g>
+<g id="furn" transform="translate(330 120) matrix(0.52 0.3 -0.52 0.3 0 0)">
+<rect x="60" y="60" width="60" height="60" rx="8" fill="#F28C38"/>
+<rect x="130" y="60" width="60" height="60" rx="8" fill="#F4C95D"/>
+<rect x="60" y="130" width="60" height="60" rx="8" fill="#2A9D8F"/>
+<rect x="220" y="160" width="150" height="44" rx="16" fill="#E86A5E"/>
+<rect x="326" y="50" width="44" height="154" rx="16" fill="#E86A5E"/>
+<circle cx="190" cy="190" r="20" fill="#14213D"/>
+<rect x="440" y="28" width="320" height="28" rx="6" fill="#1F7A70"/>
+<circle cx="500" cy="150" r="36" fill="#6CC3B5"/>
+<circle cx="610" cy="180" r="36" fill="#F28C38"/>
+<circle cx="715" cy="135" r="32" fill="#B49CFF"/>
+<rect x="90" y="320" width="240" height="84" rx="16" fill="#FBF7F0"/>
+<circle cx="140" cy="362" r="13" fill="#14213D"/>
+<circle cx="210" cy="362" r="13" fill="#2A9D8F"/>
+<circle cx="280" cy="362" r="13" fill="#14213D"/>
+<circle cx="140" cy="440" r="17" fill="#9ED8F0"/>
+<circle cx="210" cy="440" r="17" fill="#9ED8F0"/>
+<circle cx="280" cy="440" r="17" fill="#9ED8F0"/>
+<rect x="36" y="290" width="44" height="44" rx="10" fill="#E86A5E"/>
+<rect x="600" y="286" width="160" height="54" rx="8" fill="#14213D"/>
+<rect x="440" y="380" width="64" height="64" rx="6" fill="#FBF7F0"/>
+<circle cx="462" cy="402" r="9" fill="#E86A5E"/>
+<circle cx="484" cy="420" r="9" fill="#2A9D8F"/>
+<ellipse cx="660" cy="440" rx="100" ry="34" fill="#E86A5E"/>
+</g>
+</defs>
+<use href="#slab" transform="translate(0 22)" fill="#B98955"/>
+<use href="#slab" fill="#F6EBDA"/>
+<polygon points="330,120 746,360 746,250 330,10" fill="url(#glass)" stroke="#FFFFFF" stroke-width="4"/>
+<path d="M434 180V70M538 240V130M642 300V190" stroke="#FFFFFF" stroke-width="5"/>
+<polygon points="330,120 70,270 70,160 330,10" fill="#FCE3C4" stroke="#FFFFFF" stroke-width="4"/>
+<ellipse cx="252" cy="110" rx="24" ry="30" fill="#9ED8F0"/>
+<ellipse cx="148" cy="170" rx="24" ry="30" fill="#9ED8F0"/>
+<g transform="translate(330 120) matrix(0.52 0.3 -0.52 0.3 0 0)">
+<rect x="20" y="20" width="370" height="220" rx="16" fill="#FCD9B8"/>
+<rect x="410" y="20" width="370" height="220" rx="16" fill="#CBE8E2"/>
+<rect x="20" y="260" width="370" height="220" rx="16" fill="#D6DCEB"/>
+<rect x="410" y="260" width="370" height="220" rx="16" fill="#FBE7A6"/>
+<ellipse cx="610" cy="150" rx="150" ry="70" fill="#FFFFFF" opacity="0.7"/>
+<ellipse cx="210" cy="130" rx="110" ry="50" fill="#3FE0D0" opacity="0.35"/>
+</g>
+<use href="#furn" transform="translate(0 12)" filter="url(#dk)"/>
+<use href="#furn"/>
+<path d="M369 220V174M572 338V292M244 292V246M447 410V364" stroke="#14213D" stroke-width="4"/>
+<circle cx="369" cy="150" r="26" fill="#F28C38" stroke="#FFFFFF" stroke-width="4"/>
+<circle cx="572" cy="268" r="26" fill="#1F7A70" stroke="#FFFFFF" stroke-width="4"/>
+<circle cx="244" cy="222" r="26" fill="#14213D" stroke="#FFFFFF" stroke-width="4"/>
+<circle cx="447" cy="340" r="26" fill="#F4C95D" stroke="#FFFFFF" stroke-width="4"/>
+</svg>
+<p style="position:absolute;left:343px;top:129px;width:52px;font-family:'Rubik', Arial, sans-serif;font-size:30px;font-weight:700;line-height:1.4;color:#1F2A44;text-align:center">1</p>
+<p style="position:absolute;left:546px;top:247px;width:52px;font-family:'Rubik', Arial, sans-serif;font-size:30px;font-weight:700;line-height:1.4;color:#FBF7F0;text-align:center">2</p>
+<p style="position:absolute;left:218px;top:201px;width:52px;font-family:'Rubik', Arial, sans-serif;font-size:30px;font-weight:700;line-height:1.4;color:#FBF7F0;text-align:center">3</p>
+<p style="position:absolute;left:421px;top:319px;width:52px;font-family:'Rubik', Arial, sans-serif;font-size:30px;font-weight:700;line-height:1.4;color:#1F2A44;text-align:center">4</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:row;align-items:start;gap:24px">
+<div style="width:56px;height:56px;border-radius:50%;background:#F28C38;display:flex;align-items:center;justify-content:center"><p style="font-family:'Rubik', Arial, sans-serif;font-size:30px;font-weight:700;color:#1F2A44">1</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:4px"><h3 style="font-family:'Rubik', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.25">Центр вільної гри та конструювання</h3><p style="font-size:26px;line-height:1.4;color:#4A5568">Модульні меблі, екологічні конструктори</p></div>
+</div>
+<div style="display:flex;flex-direction:row;align-items:start;gap:24px">
+<div style="width:56px;height:56px;border-radius:50%;background:#1F7A70;display:flex;align-items:center;justify-content:center"><p style="font-family:'Rubik', Arial, sans-serif;font-size:30px;font-weight:700;color:#FBF7F0">2</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:4px"><h3 style="font-family:'Rubik', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.25">Медіатека та зона тиші</h3><p style="font-size:26px;line-height:1.4;color:#4A5568">Затишні куточки з інтерактивними книгами</p></div>
+</div>
+<div style="display:flex;flex-direction:row;align-items:start;gap:24px">
+<div style="width:56px;height:56px;border-radius:50%;background:#1F2A44;display:flex;align-items:center;justify-content:center"><p style="font-family:'Rubik', Arial, sans-serif;font-size:30px;font-weight:700;color:#FBF7F0">3</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:4px"><h3 style="font-family:'Rubik', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.25">STEM-лабораторія</h3><p style="font-size:26px;line-height:1.4;color:#4A5568">Перші досліди, робототехніка, цифрові мікроскопи</p></div>
+</div>
+<div style="display:flex;flex-direction:row;align-items:start;gap:24px">
+<div style="width:56px;height:56px;border-radius:50%;background:#F4C95D;display:flex;align-items:center;justify-content:center"><p style="font-family:'Rubik', Arial, sans-serif;font-size:30px;font-weight:700;color:#1F2A44">4</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:4px"><h3 style="font-family:'Rubik', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.25">Творча майстерня</h3><p style="font-size:26px;line-height:1.4;color:#4A5568">Артзона, музичний куточок, театральна студія</p></div>
+</div>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:900px;font-size:24px;color:#4F6B66">Дитячий садок майбутнього</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#4F6B66;text-align:right">06</p>
+
+</section>
+<section id="tech" data-transition="fade" style="background:#FBF7F0;color:#1F2A44;font-family:'Nunito', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:44px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:26px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:#C2581A">Розумні інструменти</p>
+<h2 style="font-family:'Rubik', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1">Інноваційні технології в освіті</h2>
+</div>
+<div style="flex:1;display:flex;flex-direction:row;gap:32px">
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#FFFDF9;padding:36px;border:2px solid #EDE3D3;border-top:12px solid #F28C38;border-radius:28px">
+<svg aria-label="Інтерактивна пісочниця з кольоровою проєкцією рельєфу, сенсорна підлога та планшет із доповненою реальністю, де видно планету" width="440" height="200" viewBox="0 0 440 200" xmlns="http://www.w3.org/2000/svg">
+<defs><linearGradient id="tg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF6EA"/><stop offset="1" stop-color="#FFD9B5"/></linearGradient><filter id="ts1" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#1F2A44" flood-opacity="0.22"/></filter><radialGradient id="tp1" cx="0.35" cy="0.3" r="0.7"><stop offset="0" stop-color="#FFC59A"/><stop offset="1" stop-color="#E8752A"/></radialGradient><clipPath id="sb"><polygon points="62,112 248,112 276,168 34,168"/></clipPath></defs>
+<rect width="440" height="200" rx="18" fill="url(#tg1)"/>
+<polygon points="149,38 161,38 262,116 48,116" fill="#7FE7F5" opacity="0.3"/>
+<rect x="118" y="14" width="74" height="24" rx="9" fill="#1F2A44" filter="url(#ts1)"/>
+<circle cx="155" cy="36" r="7" fill="#7FE7F5"/>
+<polygon points="62,112 248,112 276,168 34,168" fill="#F3D9A4" filter="url(#ts1)"/>
+<g clip-path="url(#sb)">
+<ellipse cx="155" cy="142" rx="130" ry="44" fill="#2E9BD6"/>
+<ellipse cx="160" cy="140" rx="100" ry="34" fill="#6CC3B5"/>
+<ellipse cx="165" cy="139" rx="74" ry="26" fill="#8FD18A"/>
+<ellipse cx="170" cy="138" rx="48" ry="17" fill="#F4C95D"/>
+<ellipse cx="174" cy="137" rx="22" ry="8" fill="#E86A5E"/>
+</g>
+<polygon points="62,112 248,112 276,168 34,168" fill="none" stroke="#C98B52" stroke-width="7" stroke-linejoin="round"/>
+<rect x="20" y="180" width="40" height="12" rx="3" fill="#F28C38" opacity="0.8"/>
+<rect x="64" y="180" width="40" height="12" rx="3" fill="#7FE7F5"/>
+<rect x="108" y="180" width="40" height="12" rx="3" fill="#B49CFF"/>
+<rect x="152" y="180" width="40" height="12" rx="3" fill="#F4C95D"/>
+<rect x="196" y="180" width="40" height="12" rx="3" fill="#6CC3B5"/>
+<rect x="240" y="180" width="40" height="12" rx="3" fill="#E86A5E" opacity="0.8"/>
+<rect x="302" y="42" width="112" height="146" rx="16" fill="#1F2A44" filter="url(#ts1)"/>
+<rect x="312" y="54" width="92" height="122" rx="8" fill="#2B3A67"/>
+<circle cx="358" cy="112" r="22" fill="url(#tp1)"/>
+<ellipse cx="358" cy="112" rx="40" ry="9" fill="none" stroke="#F4C95D" stroke-width="5" transform="rotate(-20 358 112)"/>
+<circle cx="326" cy="72" r="2" fill="#FFFFFF"/>
+<circle cx="392" cy="150" r="2" fill="#FFFFFF"/>
+<circle cx="330" cy="160" r="2" fill="#FFFFFF"/>
+<circle cx="398" cy="24" r="10" fill="#6CC3B5"/>
+<path d="M398 36L380 70" stroke="#6CC3B5" stroke-width="3" stroke-dasharray="4 4"/>
+</svg>
+<h3 style="font-family:'Rubik', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.25">Гаджети на користь розвитку</h3>
+<p style="font-size:26px;line-height:1.45;color:#4A5568">Інтерактивні пісочниці, сенсорні підлоги, AR-технології (доповнена реальність) для вивчення космосу та природи.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#FFFDF9;padding:36px;border:2px solid #EDE3D3;border-top:12px solid #2A9D8F;border-radius:28px">
+<svg aria-label="Мобільний застосунок для батьків: щоденник розвитку з графіком, меню дня та чат з вихователем, пов’язаний із садочком" width="440" height="200" viewBox="0 0 440 200" xmlns="http://www.w3.org/2000/svg">
+<defs><linearGradient id="tg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F0FAF7"/><stop offset="1" stop-color="#C9E8E0"/></linearGradient><filter id="ts2" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#1F2A44" flood-opacity="0.22"/></filter></defs>
+<rect width="440" height="200" rx="18" fill="url(#tg2)"/>
+<rect x="38" y="92" width="68" height="56" fill="#FBF7F0" filter="url(#ts2)"/>
+<polygon points="28,92 72,56 116,92" fill="#F28C38" filter="url(#ts2)"/>
+<rect x="64" y="118" width="16" height="30" rx="3" fill="#2A9D8F"/>
+<rect x="46" y="102" width="12" height="12" rx="2" fill="#9ED8F0"/>
+<rect x="86" y="102" width="12" height="12" rx="2" fill="#9ED8F0"/>
+<path d="M118 120Q136 90 156 108" fill="none" stroke="#2A9D8F" stroke-width="3" stroke-dasharray="5 5"/>
+<rect x="156" y="8" width="132" height="184" rx="22" fill="#1F2A44" filter="url(#ts2)"/>
+<rect x="164" y="20" width="116" height="160" rx="12" fill="#FBF7F0"/>
+<rect x="164" y="20" width="116" height="26" rx="12" fill="#2A9D8F"/>
+<circle cx="180" cy="33" r="6" fill="#FBF7F0"/>
+<rect x="191" y="30" width="44" height="6" rx="3" fill="#FBF7F0"/>
+<rect x="171" y="54" width="102" height="48" rx="8" fill="#FFFFFF" stroke="#EDE3D3" stroke-width="2"/>
+<rect x="180" y="80" width="10" height="16" rx="2" fill="#F28C38"/>
+<rect x="196" y="70" width="10" height="26" rx="2" fill="#F4C95D"/>
+<rect x="212" y="75" width="10" height="21" rx="2" fill="#2A9D8F"/>
+<rect x="228" y="63" width="10" height="33" rx="2" fill="#E86A5E"/>
+<rect x="244" y="68" width="10" height="28" rx="2" fill="#7C5CE0"/>
+<rect x="171" y="108" width="102" height="28" rx="8" fill="#FFFFFF" stroke="#EDE3D3" stroke-width="2"/>
+<circle cx="186" cy="122" r="9" fill="#F4C95D"/>
+<circle cx="186" cy="122" r="4" fill="#8FD18A"/>
+<rect x="200" y="116" width="62" height="5" rx="2" fill="#C9D3E6"/>
+<rect x="200" y="125" width="40" height="5" rx="2" fill="#C9D3E6"/>
+<rect x="171" y="142" width="70" height="14" rx="7" fill="#DCEFFF"/>
+<rect x="203" y="160" width="70" height="14" rx="7" fill="#2A9D8F"/>
+<rect x="306" y="26" width="112" height="46" rx="16" fill="#FFFFFF" filter="url(#ts2)"/>
+<polygon points="318,70 330,70 316,84" fill="#FFFFFF"/>
+<circle cx="340" cy="49" r="6" fill="#2A9D8F"/>
+<circle cx="362" cy="49" r="6" fill="#2A9D8F"/>
+<circle cx="384" cy="49" r="6" fill="#2A9D8F"/>
+<circle cx="362" cy="140" r="30" fill="#E86A5E" filter="url(#ts2)"/>
+<path d="M362 156L346 140A10 10 0 0 1 362 128A10 10 0 0 1 378 140Z" fill="#FFFFFF"/>
+</svg>
+<h3 style="font-family:'Rubik', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.25">Цифрова екосистема закладу</h3>
+<p style="font-size:26px;line-height:1.45;color:#4A5568">Мобільний застосунок для батьків: онлайн-щоденник розвитку, меню, прямий зв’язок з вихователем у реальному часі.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#FFFDF9;padding:36px;border:2px solid #EDE3D3;border-top:12px solid #1F2A44;border-radius:28px">
+<svg aria-label="Віртуальний ШІ-асистент на ноутбуці педагога підбирає завдання трьом дітям, у кожної дитини свій темп розвитку" width="440" height="200" viewBox="0 0 440 200" xmlns="http://www.w3.org/2000/svg">
+<defs><linearGradient id="tg3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F3F1FF"/><stop offset="1" stop-color="#D6DCF5"/></linearGradient><filter id="ts3" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#1F2A44" flood-opacity="0.22"/></filter><filter id="tgl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<rect width="440" height="200" rx="18" fill="url(#tg3)"/>
+<rect x="30" y="30" width="210" height="124" rx="12" fill="#1F2A44" filter="url(#ts3)"/>
+<rect x="40" y="40" width="190" height="104" rx="6" fill="#2B3A67"/>
+<polygon points="14,154 256,154 240,172 30,172" fill="#C9D3E6"/>
+<circle cx="92" cy="92" r="30" fill="#8B6CF0" filter="url(#tgl)"/>
+<path d="M92 72L98 86L112 92L98 98L92 112L86 98L72 92L86 86Z" fill="#FFFFFF"/>
+<circle cx="116" cy="66" r="5" fill="#F4C95D"/>
+<rect x="140" y="58" width="78" height="12" rx="6" fill="#6CC3B5"/>
+<rect x="140" y="78" width="58" height="12" rx="6" fill="#F4C95D"/>
+<rect x="140" y="98" width="70" height="12" rx="6" fill="#F28C38"/>
+<rect x="140" y="118" width="48" height="12" rx="6" fill="#E86A5E"/>
+<path d="M240 70Q262 50 282 50M240 100H282M240 130Q262 150 282 150" fill="none" stroke="#7C5CE0" stroke-width="3" stroke-dasharray="5 5"/>
+<circle cx="300" cy="50" r="17" fill="#F2C9A0" filter="url(#ts3)"/>
+<path d="M283 46A17 17 0 0 1 317 46Q300 36 283 46Z" fill="#7A5233"/>
+<circle cx="300" cy="100" r="17" fill="#F2C9A0" filter="url(#ts3)"/>
+<path d="M283 96A17 17 0 0 1 317 96Q300 86 283 96Z" fill="#E0B040"/>
+<circle cx="300" cy="150" r="17" fill="#F2C9A0" filter="url(#ts3)"/>
+<path d="M283 146A17 17 0 0 1 317 146Q300 136 283 146Z" fill="#1F2A44"/>
+<rect x="326" y="44" width="96" height="12" rx="6" fill="#DCE0F0"/>
+<rect x="326" y="44" width="78" height="12" rx="6" fill="#2A9D8F"/>
+<rect x="326" y="94" width="96" height="12" rx="6" fill="#DCE0F0"/>
+<rect x="326" y="94" width="50" height="12" rx="6" fill="#F4C95D"/>
+<rect x="326" y="144" width="96" height="12" rx="6" fill="#DCE0F0"/>
+<rect x="326" y="144" width="92" height="12" rx="6" fill="#F28C38"/>
+</svg>
+<h3 style="font-family:'Rubik', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.25">Штучний інтелект (ШІ)</h3>
+<p style="font-size:26px;line-height:1.45;color:#4A5568">Віртуальні асистенти для педагогів: допомога у підборі індивідуальних завдань відповідно до темпу розвитку дитини.</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:900px;font-size:24px;color:#6B7280">Дитячий садок майбутнього</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#6B7280;text-align:right">07</p>
+
+</section>
+<section id="health" data-transition="fade" style="background:#EAF4F1;color:#1F2A44;font-family:'Nunito', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:44px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:26px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:#1F7A70">Здорова дитина</p>
+<h2 style="font-family:'Rubik', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1">Здоров’я, харчування та спорт</h2>
+</div>
+<div style="flex:1;display:flex;flex-direction:row;gap:32px">
+<div style="width:620px;display:flex;flex-direction:column;justify-content:space-between;gap:24px;background:#1F2A44;padding:48px;border-radius:28px">
+<svg aria-label="Дитячий розумний годинник із сердечком та зірочками-нагородами: ігровий моніторинг фізичного стану" width="520" height="240" viewBox="0 0 520 240" xmlns="http://www.w3.org/2000/svg">
+<defs><path id="st" d="M0,-18L5,-6L18,-6L8,3L11,16L0,8L-11,16L-8,3L-18,-6L-5,-6Z"/><filter id="hg1" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><filter id="hs1" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000000" flood-opacity="0.35"/></filter><linearGradient id="hb1" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#43BFAE"/><stop offset="1" stop-color="#1F7A70"/></linearGradient></defs>
+<circle cx="260" cy="120" r="110" fill="#2B3A67"/>
+<rect x="225" y="4" width="70" height="232" rx="22" fill="url(#hb1)" filter="url(#hs1)"/>
+<rect x="241" y="20" width="38" height="8" rx="4" fill="#1F7A70"/>
+<rect x="241" y="212" width="38" height="8" rx="4" fill="#1F7A70"/>
+<rect x="190" y="50" width="140" height="140" rx="36" fill="#FBF7F0" stroke="#F4C95D" stroke-width="8" filter="url(#hs1)"/>
+<path d="M260 150L230 120A17 17 0 0 1 260 96A17 17 0 0 1 290 120Z" fill="#E86A5E" filter="url(#hg1)"/>
+<rect x="222" y="160" width="76" height="10" rx="5" fill="#DCE0F0"/>
+<rect x="222" y="160" width="54" height="10" rx="5" fill="#2A9D8F"/>
+<use href="#st" x="90" y="70" fill="#F4C95D" filter="url(#hg1)"/>
+<use href="#st" x="60" y="150" fill="#F28C38" transform="rotate(0)"/>
+<use href="#st" x="430" y="80" fill="#F4C95D" filter="url(#hg1)"/>
+<use href="#st" x="460" y="170" fill="#6CC3B5"/>
+<circle cx="140" cy="200" r="6" fill="#F4C95D"/>
+<circle cx="380" cy="34" r="6" fill="#F28C38"/>
+<circle cx="150" cy="40" r="4" fill="#6CC3B5"/>
+<circle cx="400" cy="214" r="5" fill="#E86A5E"/>
+</svg>
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-family:'Rubik', Arial, sans-serif;font-size:44px;font-weight:600;line-height:1.2;color:#F4C95D">Здорова дитина — майбутнє країни</p>
+<p style="font-size:32px;line-height:1.4;color:#FBF7F0">Щоденний моніторинг фізичного стану дитини у формі гри.</p>
+</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:32px">
+<div style="flex:1;display:flex;flex-direction:row;align-items:center;gap:32px;background:#FBF7F0;padding:32px 40px;border-radius:28px">
+<svg aria-label="Тарілка зі здоровою їжею — броколі, морква, яблуко — склянка фрешу та значок меню для дітей з алергіями" width="220" height="200" viewBox="0 0 220 200" xmlns="http://www.w3.org/2000/svg">
+<defs><filter id="hs2" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#1F2A44" flood-opacity="0.22"/></filter><linearGradient id="hj2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFC266"/><stop offset="1" stop-color="#F28C38"/></linearGradient></defs>
+<circle cx="96" cy="108" r="80" fill="#FFFFFF" filter="url(#hs2)"/>
+<circle cx="96" cy="108" r="60" fill="#FBF7F0"/>
+<circle cx="72" cy="92" r="14" fill="#5DB566"/>
+<circle cx="86" cy="80" r="13" fill="#4CA65A"/>
+<circle cx="62" cy="80" r="11" fill="#6FCB72"/>
+<rect x="72" y="96" width="8" height="20" rx="3" fill="#8FD18A"/>
+<circle cx="118" cy="96" r="11" fill="#F28C38"/>
+<circle cx="118" cy="96" r="5" fill="#F7A35C"/>
+<circle cx="134" cy="114" r="11" fill="#F28C38"/>
+<circle cx="134" cy="114" r="5" fill="#F7A35C"/>
+<path d="M76 136A24 24 0 0 1 124 136Z" fill="#E86A5E"/>
+<path d="M82 136A18 18 0 0 1 118 136Z" fill="#FBEFD0"/>
+<rect x="176" y="68" width="34" height="86" rx="7" fill="url(#hj2)" filter="url(#hs2)"/>
+<rect x="181" y="90" width="6" height="56" rx="3" fill="#FFFFFF" opacity="0.4"/>
+<rect x="176" y="68" width="34" height="18" rx="7" fill="#F7C35C"/>
+<path d="M200 70L210 34" stroke="#2A9D8F" stroke-width="5" stroke-linecap="round"/>
+<circle cx="26" cy="26" r="20" fill="#2A9D8F" filter="url(#hs2)"/>
+<path d="M16 26L23 33L36 19" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px">
+<h3 style="font-family:'Rubik', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.25">Харчування</h3>
+<p style="font-size:26px;line-height:1.45;color:#4A5568">Індивідуальне корисне меню: фреш-бари, альтернатива для дітей з алергіями чи особливими дієтичними потребами.</p>
+</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:row;align-items:center;gap:32px;background:#FBF7F0;padding:32px 40px;border-radius:28px">
+<svg aria-label="Чотири види занять: дитяча йога, плавання, скеледром і соляна кімната" width="220" height="200" viewBox="0 0 220 200" xmlns="http://www.w3.org/2000/svg">
+<defs><filter id="hs3" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#1F2A44" flood-opacity="0.18"/></filter></defs>
+<g filter="url(#hs3)"><rect x="0" y="0" width="104" height="94" rx="14" fill="#E6F4F1"/><rect x="116" y="0" width="104" height="94" rx="14" fill="#DCEFFF"/><rect x="0" y="106" width="104" height="94" rx="14" fill="#FFF1E3"/><rect x="116" y="106" width="104" height="94" rx="14" fill="#FCE8DE"/></g>
+<rect x="18" y="80" width="68" height="8" rx="4" fill="#6CC3B5"/>
+<circle cx="52" cy="22" r="8" fill="#F2C9A0"/>
+<path d="M52 30V58M52 38L38 20M52 38L66 20M52 58L42 80M52 58L64 66L52 70" fill="none" stroke="#7C5CE0" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="116" y="0" width="104" height="94" rx="14" fill="#DCEFFF"/>
+<path d="M116 62Q130 52 144 62T172 62T200 62T220 62V80A14 14 0 0 1 206 94H130A14 14 0 0 1 116 80Z" fill="#2E9BD6"/>
+<circle cx="160" cy="50" r="9" fill="#F2C9A0"/>
+<path d="M146 44Q160 26 178 40" fill="none" stroke="#F28C38" stroke-width="6" stroke-linecap="round"/>
+<rect x="0" y="106" width="104" height="94" rx="14" fill="#FFF1E3"/>
+<polygon points="20,192 40,118 96,118 84,192" fill="#C98B52"/>
+<circle cx="48" cy="140" r="6" fill="#E86A5E"/>
+<circle cx="72" cy="132" r="6" fill="#F4C95D"/>
+<circle cx="58" cy="162" r="6" fill="#2A9D8F"/>
+<circle cx="80" cy="172" r="6" fill="#7C5CE0"/>
+<circle cx="40" cy="180" r="6" fill="#F28C38"/>
+<rect x="116" y="106" width="104" height="94" rx="14" fill="#FCE8DE"/>
+<circle cx="168" cy="140" r="22" fill="#FFD9B8" opacity="0.8"/>
+<polygon points="140,190 150,150 160,190" fill="#F7C9B8"/>
+<polygon points="156,190 168,140 180,190" fill="#F4B4A0"/>
+<polygon points="176,190 186,158 196,190" fill="#F7C9B8"/>
+<rect x="128" y="188" width="80" height="6" rx="3" fill="#E8A48C"/>
+</svg>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px">
+<h3 style="font-family:'Rubik', Arial, sans-serif;font-size:32px;font-weight:600;line-height:1.25">Спорт</h3>
+<div style="display:flex;flex-direction:row;flex-wrap:wrap;gap:12px">
+<p style="font-size:26px;font-weight:700;background:#F4C95D;padding:8px 22px;border-radius:40px">Дитяча йога</p>
+<p style="font-size:26px;font-weight:700;background:#F4C95D;padding:8px 22px;border-radius:40px">Плавання</p>
+<p style="font-size:26px;font-weight:700;background:#F4C95D;padding:8px 22px;border-radius:40px">Скелелазіння</p>
+<p style="font-size:26px;font-weight:700;color:#FBF7F0;background:#1F7A70;padding:8px 22px;border-radius:40px">Соляні кімнати — профілактика захворювань</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:900px;font-size:24px;color:#4F6B66">Дитячий садок майбутнього</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#4F6B66;text-align:right">08</p>
+
+</section>
+<section id="teacher" data-transition="fade" style="background:#FBF7F0;color:#1F2A44;font-family:'Nunito', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:26px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:#C2581A">Тріада «Дитина — Батьки — Садок»</p>
+<h2 style="font-family:'Rubik', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1">Нова роль педагога</h2>
+</div>
+<div style="flex:1;display:flex;flex-direction:row;align-items:center;gap:72px">
+<div style="flex:1;display:flex;flex-direction:column;gap:26px">
+<div style="display:flex;flex-direction:row;align-items:center;gap:28px">
+<svg aria-label="Вихователька-наставниця присіла поруч із дитиною і разом із нею роздивляється кубики та лупу" width="200" height="190" viewBox="0 0 200 190" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="t0a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE9D2"/><stop offset="1" stop-color="#FFD3AE"/></linearGradient>
+<filter id="t0s" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#1F2A44" flood-opacity="0.2"/></filter>
+</defs>
+<circle cx="100" cy="95" r="92" fill="url(#t0a)"/>
+<g filter="url(#t0s)">
+<path d="M48 168Q48 104 82 104Q110 104 112 140L112 168Z" fill="#2A9D8F"/>
+<circle cx="80" cy="80" r="22" fill="#F2C9A0"/>
+<path d="M57 80Q58 52 82 54Q104 56 102 82Q96 64 76 68Q64 72 57 80Z" fill="#7A5233"/>
+<path d="M58 80Q54 102 66 108" stroke="#7A5233" stroke-width="8" fill="none" stroke-linecap="round"/>
+<path d="M74 90Q80 95 86 90" stroke="#7A5233" stroke-width="2" fill="none"/>
+<path d="M104 128L130 140" stroke="#2A9D8F" stroke-width="10" stroke-linecap="round"/>
+<rect x="128" y="124" width="30" height="34" rx="11" fill="#F28C38"/>
+<circle cx="143" cy="110" r="16" fill="#F2C9A0"/>
+<path d="M127 108Q143 90 159 108Q143 100 127 108Z" fill="#E0B040"/>
+<path d="M137 116Q143 121 149 116" stroke="#7A5233" stroke-width="2" fill="none"/>
+<rect x="124" y="158" width="20" height="20" rx="4" fill="#6CC3B5"/>
+<rect x="146" y="158" width="20" height="20" rx="4" fill="#F4C95D"/>
+<rect x="135" y="138" width="20" height="20" rx="4" fill="#E86A5E" opacity="0"/>
+</g>
+<circle cx="168" cy="62" r="13" fill="#FFFFFF" stroke="#1F2A44" stroke-width="5"/>
+<path d="M177 72L188 84" stroke="#1F2A44" stroke-width="6" stroke-linecap="round"/>
+<path d="M30 40L32 46L38 47L33 50L35 56L30 53L25 56L27 50L22 47L28 46Z" fill="#F4C95D"/>
+</svg>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:26px;font-weight:800;color:#1F7A70">ВИХОВАТЕЛЬ МАЙБУТНЬОГО</p>
+<p style="font-size:32px;color:#6B7280;text-decoration:line-through">Не диктатор,</p>
+<p style="font-family:'Rubik', Arial, sans-serif;font-size:40px;font-weight:600;line-height:1.2">а <span style="color:#C2581A">ментор і фасилітатор</span>, який спрямовує інтереси дитини</p>
+</div>
+</div>
+<hr style="border-top:2px solid #EDE3D3;width:900px">
+<p style="font-size:26px;font-weight:800;color:#1F7A70">ВЗАЄМОДІЯ З БАТЬКАМИ</p>
+<div style="display:flex;flex-direction:row;align-items:center;gap:24px">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#1F7A70;width:56px;height:56px" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+<p style="flex:1;font-size:26px;line-height:1.45;color:#4A5568"><b style="color:#1F2A44">Відкритість освітнього процесу</b> — батьки можуть долучатися до занять.</p>
+</div>
+<div style="display:flex;flex-direction:row;align-items:center;gap:24px">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#1F7A70;width:56px;height:56px" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V2H6.5A2.5 2.5 0 0 0 4 4.5v15z"/><path d="M6.5 17A2.5 2.5 0 0 0 4 19.5 2.5 2.5 0 0 0 6.5 22H20v-5"/></svg>
+<p style="flex:1;font-size:26px;line-height:1.45;color:#4A5568"><b style="color:#1F2A44">«Клуб свідомого батьківства»</b> — лекторії, психологічна підтримка та системна література замість хаотичних порад з інтернету.</p>
+</div>
+</div>
+<div style="position:relative;width:620px;height:600px">
+<svg aria-label="Тріада: у трьох колах — дитина, батьки й будівля садочка, з’єднані лініями з сердечками" width="620" height="540" viewBox="0 0 620 540" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="t1a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F9B57A"/><stop offset="1" stop-color="#E8752A"/></linearGradient>
+<linearGradient id="t1b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#43BFAE"/><stop offset="1" stop-color="#1F7A70"/></linearGradient>
+<linearGradient id="t1c" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3A4C82"/><stop offset="1" stop-color="#1F2A44"/></linearGradient>
+<filter id="t1s" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#1F2A44" flood-opacity="0.25"/></filter>
+<path id="t1h" d="M0 9L-11 -2A6.5 6.5 0 0 1 0 -10A6.5 6.5 0 0 1 11 -2Z"/>
+</defs>
+<path d="M240 180Q150 220 150 300M380 180Q470 220 470 300M230 420Q310 460 390 420" fill="none" stroke="#E8A48C" stroke-width="5" stroke-dasharray="10 10" stroke-linecap="round"/>
+<use href="#t1h" x="176" y="226" fill="#E86A5E"/>
+<use href="#t1h" x="444" y="226" fill="#E86A5E"/>
+<use href="#t1h" x="310" y="446" fill="#E86A5E"/>
+<g filter="url(#t1s)">
+<circle cx="310" cy="115" r="105" fill="url(#t1a)"/>
+<circle cx="125" cy="400" r="105" fill="url(#t1b)"/>
+<circle cx="495" cy="400" r="105" fill="url(#t1c)"/>
+</g>
+<circle cx="276" cy="70" r="30" fill="#FFFFFF" opacity="0.15"/>
+<path d="M248 210Q248 158 310 158Q372 158 372 210Z" fill="#FBF7F0"/>
+<circle cx="310" cy="108" r="42" fill="#F2C9A0"/>
+<path d="M266 104Q270 60 310 62Q352 62 354 104Q340 80 310 82Q284 82 266 104Z" fill="#7A5233"/>
+<circle cx="295" cy="110" r="5" fill="#1F2A44"/>
+<circle cx="325" cy="110" r="5" fill="#1F2A44"/>
+<path d="M296 126Q310 138 324 126" stroke="#C2581A" stroke-width="4" fill="none" stroke-linecap="round"/>
+<circle cx="284" cy="124" r="6" fill="#F7A35C" opacity="0.6"/>
+<circle cx="336" cy="124" r="6" fill="#F7A35C" opacity="0.6"/>
+<path d="M50 470Q50 412 98 412Q140 412 140 470Z" fill="#F4C95D"/>
+<path d="M110 476Q110 420 158 420Q200 420 200 476Z" fill="#FBF7F0"/>
+<circle cx="96" cy="380" r="28" fill="#F2C9A0"/>
+<path d="M68 376Q70 346 98 348Q124 350 124 378Q114 360 94 362Q78 364 68 376Z" fill="#E0B040"/>
+<path d="M70 378Q64 404 78 412" stroke="#E0B040" stroke-width="9" fill="none" stroke-linecap="round"/>
+<circle cx="156" cy="384" r="27" fill="#F2C9A0"/>
+<path d="M130 378Q134 354 158 356Q182 358 182 380Q170 366 150 368Q138 370 130 378Z" fill="#1F2A44"/>
+<path d="M88 386Q96 392 104 386M148 390Q156 396 164 390" stroke="#7A5233" stroke-width="3" fill="none" stroke-linecap="round"/>
+<circle cx="555" cy="345" r="16" fill="#F4C95D"/>
+<rect x="430" y="390" width="130" height="78" rx="6" fill="#FBF7F0"/>
+<polygon points="418,396 495,336 572,396" fill="#F28C38"/>
+<rect x="444" y="404" width="26" height="24" rx="4" fill="#9ED8F0"/>
+<rect x="520" y="404" width="26" height="24" rx="4" fill="#9ED8F0"/>
+<rect x="481" y="420" width="28" height="48" rx="4" fill="#2A9D8F"/>
+<path d="M495 384L486 375A5 5 0 0 1 495 369A5 5 0 0 1 504 375Z" fill="#E86A5E"/>
+</svg>
+<p style="position:absolute;left:210px;top:224px;width:200px;font-family:'Rubik', Arial, sans-serif;font-size:36px;font-weight:600;color:#1F2A44;text-align:center">Дитина</p>
+<p style="position:absolute;left:25px;top:512px;width:200px;font-family:'Rubik', Arial, sans-serif;font-size:36px;font-weight:600;color:#1F7A70;text-align:center">Батьки</p>
+<p style="position:absolute;left:395px;top:512px;width:200px;font-family:'Rubik', Arial, sans-serif;font-size:36px;font-weight:600;color:#1F2A44;text-align:center">Садок</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:900px;font-size:24px;color:#6B7280">Дитячий садок майбутнього</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#6B7280;text-align:right">09</p>
+
+</section>
+<section id="results" data-transition="fade" style="background:#EAF4F1;color:#1F2A44;font-family:'Nunito', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:26px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:#1F7A70">Випускник садочка</p>
+<h2 style="font-family:'Rubik', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1">Очікувані результати</h2>
+</div>
+<div style="display:flex;flex-direction:row;gap:48px">
+<div style="flex:1;display:flex;flex-direction:column;gap:18px">
+<svg aria-label="Впевнена дитина з рюкзаком крокує доріжкою до школи з прапорцем, над нею зірка" width="490" height="230" viewBox="0 0 490 230" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="r1a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#CDEBF6"/><stop offset="1" stop-color="#F4FAF7"/></linearGradient>
+<linearGradient id="r1b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F7A35C"/><stop offset="1" stop-color="#E8752A"/></linearGradient>
+<filter id="r1s" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#1F2A44" flood-opacity="0.2"/></filter>
+<clipPath id="r1k"><rect width="490" height="230" rx="24"/></clipPath>
+</defs>
+<g clip-path="url(#r1k)">
+<rect width="490" height="230" fill="url(#r1a)"/>
+<path d="M0 180Q245 150 490 175V230H0Z" fill="#8BD47A"/>
+<path d="M60 230Q200 190 330 178L380 178Q260 200 200 230Z" fill="#F1E9DB"/>
+<g filter="url(#r1s)">
+<rect x="320" y="80" width="140" height="100" rx="6" fill="#FBF7F0"/>
+<polygon points="306,86 390,36 474,86" fill="url(#r1b)"/>
+<path d="M390 36V8" stroke="#1F2A44" stroke-width="3"/>
+<polygon points="390,8 416,15 390,22" fill="#2E9BD6"/>
+<polygon points="390,22 416,15 416,29 390,29" fill="#F4C95D" opacity="0"/>
+<rect x="336" y="98" width="28" height="26" rx="4" fill="#9ED8F0"/>
+<rect x="416" y="98" width="28" height="26" rx="4" fill="#9ED8F0"/>
+<rect x="374" y="130" width="32" height="50" rx="4" fill="#2A9D8F"/>
+</g>
+<ellipse cx="160" cy="204" rx="30" ry="7" fill="#000000" opacity="0.12"/>
+<g filter="url(#r1s)">
+<rect x="128" y="120" width="30" height="40" rx="9" fill="#2E9BD6"/>
+<rect x="148" y="118" width="34" height="50" rx="12" fill="#E86A5E"/>
+<path d="M156 168L148 200M174 168L184 198" stroke="#1F2A44" stroke-width="9" stroke-linecap="round"/>
+<path d="M178 128L198 112" stroke="#E86A5E" stroke-width="8" stroke-linecap="round"/>
+<circle cx="166" cy="100" r="19" fill="#F2C9A0"/>
+<path d="M147 98Q166 74 185 98Q166 90 147 98Z" fill="#7A5233"/>
+<path d="M162 108Q168 114 176 108" stroke="#7A5233" stroke-width="2.5" fill="none"/>
+</g>
+<path d="M90 40L95 54L110 55L98 64L102 78L90 70L78 78L82 64L70 55L85 54Z" fill="#F4C95D"/>
+<circle cx="230" cy="60" r="4" fill="#F28C38"/>
+<circle cx="50" cy="110" r="3" fill="#2A9D8F"/>
+</g>
+</svg>
+<p style="font-family:'Rubik', Arial, sans-serif;font-size:44px;font-weight:700;color:#D9661F">01</p>
+<p style="font-size:30px;line-height:1.4"><b>Впевнена в собі, емоційно інтелектуальна особистість</b>, готова до викликів Нової української школи (НУШ)</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:18px">
+<svg aria-label="Дитина з планшетом, довкола якої літають значки: хмаринка, лампочка, планета, кнопка відтворення — легкість у цифровому світі" width="490" height="230" viewBox="0 0 490 230" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="r2a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E3E0FF"/><stop offset="1" stop-color="#CDEBF6"/></linearGradient>
+<filter id="r2s" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#1F2A44" flood-opacity="0.2"/></filter>
+</defs>
+<rect width="490" height="230" rx="24" fill="url(#r2a)"/>
+<circle cx="245" cy="120" r="88" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-dasharray="6 8"/>
+<circle cx="245" cy="120" r="60" fill="#FFFFFF" opacity="0.5"/>
+<ellipse cx="245" cy="212" rx="34" ry="7" fill="#000000" opacity="0.1"/>
+<g filter="url(#r2s)">
+<rect x="224" y="140" width="42" height="56" rx="14" fill="#7C5CE0"/>
+<path d="M234 196L232 210M256 196L258 210" stroke="#1F2A44" stroke-width="8" stroke-linecap="round"/>
+<circle cx="245" cy="116" r="22" fill="#F2C9A0"/>
+<path d="M223 114Q245 86 267 114Q245 104 223 114Z" fill="#1F2A44"/>
+<path d="M238 124Q245 130 252 124" stroke="#7A5233" stroke-width="2.5" fill="none"/>
+<rect x="226" y="146" width="40" height="30" rx="5" fill="#1F2A44"/>
+<rect x="230" y="150" width="32" height="22" rx="3" fill="#7FE7F5"/>
+</g>
+<g filter="url(#r2s)">
+<circle cx="120" cy="60" r="28" fill="#FFFFFF"/>
+<path d="M106 66H134A8 8 0 0 0 132 51A11 11 0 0 0 112 54A7 7 0 0 0 106 66Z" fill="#2E9BD6"/>
+<circle cx="380" cy="56" r="28" fill="#FFFFFF"/>
+<circle cx="380" cy="52" r="10" fill="#F4C95D"/>
+<rect x="375" y="62" width="10" height="8" rx="2" fill="#9AA3AE"/>
+<circle cx="96" cy="160" r="28" fill="#FFFFFF"/>
+<circle cx="96" cy="160" r="14" fill="#6CC3B5"/>
+<path d="M84 154Q96 160 108 154M86 168Q96 162 106 168" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+<circle cx="396" cy="164" r="28" fill="#FFFFFF"/>
+<polygon points="389,152 389,176 409,164" fill="#E86A5E"/>
+</g>
+<path d="M146 70L200 100M354 66L290 98M122 152L200 140M368 160L290 142" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+</svg>
+<p style="font-family:'Rubik', Arial, sans-serif;font-size:44px;font-weight:700;color:#1F7A70">02</p>
+<p style="font-size:30px;line-height:1.4"><b>Високий рівень адаптивності</b> дитини до змін у цифровому світі</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:18px">
+<svg aria-label="Радісна дитина стоїть на міцній основі з різнокольорових блоків із сердечком — психологічний фундамент" width="490" height="230" viewBox="0 0 490 230" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="r3a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF1DE"/><stop offset="1" stop-color="#FFE0C2"/></linearGradient>
+<filter id="r3s" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#1F2A44" flood-opacity="0.2"/></filter>
+</defs>
+<rect width="490" height="230" rx="24" fill="url(#r3a)"/>
+<circle cx="400" cy="56" r="44" fill="#FFE08A" opacity="0.5"/>
+<circle cx="400" cy="56" r="24" fill="#F4C95D"/>
+<ellipse cx="245" cy="216" rx="150" ry="8" fill="#000000" opacity="0.1"/>
+<g filter="url(#r3s)">
+<rect x="110" y="170" width="88" height="42" rx="6" fill="#2A9D8F"/>
+<rect x="202" y="170" width="88" height="42" rx="6" fill="#F28C38"/>
+<rect x="294" y="170" width="88" height="42" rx="6" fill="#7C5CE0"/>
+<rect x="156" y="124" width="88" height="42" rx="6" fill="#F4C95D"/>
+<rect x="248" y="124" width="88" height="42" rx="6" fill="#E86A5E"/>
+<path d="M246 158L234 146A7 7 0 0 1 246 137A7 7 0 0 1 258 146Z" fill="#FBF7F0"/>
+</g>
+<g filter="url(#r3s)">
+<rect x="230" y="74" width="32" height="40" rx="11" fill="#2E9BD6"/>
+<path d="M238 114L236 124M254 114L256 124" stroke="#1F2A44" stroke-width="7" stroke-linecap="round"/>
+<path d="M232 82L212 58M260 82L280 58" stroke="#2E9BD6" stroke-width="8" stroke-linecap="round"/>
+<circle cx="246" cy="56" r="19" fill="#F2C9A0"/>
+<path d="M227 54Q246 30 265 54Q246 46 227 54Z" fill="#E0B040"/>
+<path d="M239 62Q246 69 253 62" stroke="#7A5233" stroke-width="2.5" fill="none"/>
+</g>
+<path d="M190 40L193 48L201 49L195 54L197 62L190 58L183 62L185 54L179 49L187 48Z" fill="#F28C38"/>
+<path d="M300 30L302 36L308 37L303 40L305 46L300 43L295 46L297 40L292 37L298 36Z" fill="#F28C38"/>
+</svg>
+<p style="font-family:'Rubik', Arial, sans-serif;font-size:44px;font-weight:700;color:#1F2A44">03</p>
+<p style="font-size:30px;line-height:1.4"><b>Міцний психологічний фундамент</b> для майбутнього навчання</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:900px;font-size:24px;color:#4F6B66">Дитячий садок майбутнього</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;color:#4F6B66;text-align:right">10</p>
+
+</section>
+<section id="finale" data-transition="fade" style="background:radial-gradient(circle at 80% 40%, #2B3A67 0%, #1F2A44 55%);color:#FBF7F0;font-family:'Nunito', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;gap:44px">
+<svg aria-label="Радісні діти тримають в’язку різнокольорових повітряних кульок серед зірочок" style="position:absolute;left:1380px;top:128px;width:412px;height:824px" width="412" height="824" viewBox="0 0 412 824" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialGradient id="f1" cx="0.35" cy="0.3" r="0.7"><stop offset="0" stop-color="#FFC59A"/><stop offset="1" stop-color="#E8752A"/></radialGradient>
+<radialGradient id="f2" cx="0.35" cy="0.3" r="0.7"><stop offset="0" stop-color="#FFEBA8"/><stop offset="1" stop-color="#E0B040"/></radialGradient>
+<radialGradient id="f3" cx="0.35" cy="0.3" r="0.7"><stop offset="0" stop-color="#9FE6DA"/><stop offset="1" stop-color="#1F7A70"/></radialGradient>
+<radialGradient id="f4" cx="0.35" cy="0.3" r="0.7"><stop offset="0" stop-color="#FFB3A8"/><stop offset="1" stop-color="#C9544A"/></radialGradient>
+<radialGradient id="f5" cx="0.35" cy="0.3" r="0.7"><stop offset="0" stop-color="#D6C8FF"/><stop offset="1" stop-color="#6B4FD0"/></radialGradient>
+<filter id="fs" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000000" flood-opacity="0.3"/></filter>
+<path id="fst" d="M0,-14L4,-4L14,-4L6,2L9,12L0,6L-9,12L-6,2L-14,-4L-4,-4Z"/>
+</defs>
+<path d="M120 120Q150 300 196 560M210 150Q205 350 200 560M300 110Q250 330 204 560M86 280Q140 420 194 560M330 290Q270 420 206 560" fill="none" stroke="#C9D3E6" stroke-width="2" opacity="0.8"/>
+<g filter="url(#fs)">
+<ellipse cx="120" cy="80" rx="56" ry="66" fill="url(#f1)"/>
+<ellipse cx="300" cy="72" rx="54" ry="64" fill="url(#f5)"/>
+<ellipse cx="210" cy="110" rx="58" ry="68" fill="url(#f2)"/>
+<ellipse cx="86" cy="236" rx="50" ry="60" fill="url(#f3)"/>
+<ellipse cx="330" cy="246" rx="52" ry="62" fill="url(#f4)"/>
+</g>
+<polygon points="114,144 126,144 120,154" fill="#E8752A"/>
+<polygon points="294,134 306,134 300,144" fill="#6B4FD0"/>
+<polygon points="204,176 216,176 210,186" fill="#E0B040"/>
+<polygon points="80,294 92,294 86,304" fill="#1F7A70"/>
+<polygon points="324,306 336,306 330,316" fill="#C9544A"/>
+<ellipse cx="200" cy="790" rx="150" ry="16" fill="#000000" opacity="0.25"/>
+<g filter="url(#fs)">
+<rect x="170" y="640" width="60" height="96" rx="22" fill="#F28C38"/>
+<path d="M184 736L178 784M216 736L222 784" stroke="#14213D" stroke-width="16" stroke-linecap="round"/>
+<path d="M216 652L204 566" stroke="#F28C38" stroke-width="14" stroke-linecap="round"/>
+<circle cx="200" cy="604" r="38" fill="#F2C9A0"/>
+<path d="M162 600Q200 552 238 600Q200 584 162 600Z" fill="#7A5233"/>
+<path d="M186 618Q200 632 214 618" stroke="#7A5233" stroke-width="4" fill="none" stroke-linecap="round"/>
+<rect x="66" y="676" width="50" height="78" rx="18" fill="#2A9D8F"/>
+<path d="M78 754L74 790M104 754L108 790" stroke="#14213D" stroke-width="13" stroke-linecap="round"/>
+<path d="M110 688L150 660" stroke="#2A9D8F" stroke-width="11" stroke-linecap="round"/>
+<circle cx="91" cy="646" r="30" fill="#F2C9A0"/>
+<path d="M61 642Q91 604 121 642Q91 630 61 642Z" fill="#E0B040"/>
+<path d="M80 656Q91 666 102 656" stroke="#7A5233" stroke-width="3" fill="none" stroke-linecap="round"/>
+<rect x="290" y="680" width="50" height="76" rx="18" fill="#E86A5E"/>
+<path d="M302 756L298 790M328 756L332 790" stroke="#14213D" stroke-width="13" stroke-linecap="round"/>
+<path d="M296 692L254 662" stroke="#E86A5E" stroke-width="11" stroke-linecap="round"/>
+<circle cx="315" cy="650" r="30" fill="#F2C9A0"/>
+<path d="M285 646Q315 608 345 646Q315 634 285 646Z" fill="#1F2A44"/>
+<path d="M304 660Q315 670 326 660" stroke="#7A5233" stroke-width="3" fill="none" stroke-linecap="round"/>
+</g>
+<use href="#fst" x="40" y="420" fill="#F4C95D"/>
+<use href="#fst" x="370" y="440" fill="#F4C95D"/>
+<use href="#fst" x="300" y="520" fill="#6CC3B5"/>
+<use href="#fst" x="70" y="540" fill="#F28C38"/>
+<circle cx="150" cy="460" r="4" fill="#FBF7F0"/>
+<circle cx="260" cy="400" r="3" fill="#FBF7F0"/>
+<circle cx="360" cy="360" r="3" fill="#FBF7F0"/>
+</svg>
+<p style="font-size:26px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:#F4C95D">Висновки</p>
+<p style="font-family:'Rubik', Arial, sans-serif;font-size:44px;font-weight:500;line-height:1.3;width:1200px">Дитячий садок майбутнього — це не просто гаджети й роботи. Це простір, де поважають унікальність кожної дитини, плекають її таланти та дарують щасливе дитинство.</p>
+<p style="font-family:'Rubik', Arial, sans-serif;font-size:72px;font-weight:600;font-style:italic;line-height:1.15;color:#F4C95D;width:1200px">«Діти — це наше майбутнє, і воно починається вже сьогодні!»</p>
+<div style="display:flex;flex-direction:column;gap:8px">
+<p style="font-size:32px;font-weight:800">Дякую за увагу!</p>
+<p style="font-size:26px;color:#C9D3E6">[Контакти] · [посилання на сайт проєкту]</p>
+</div>
+
+</section>
+</div></div>
+<div class="nav"><button id="prev" type="button" aria-label="Попередній слайд">&#8592;</button><span id="count">1 / 1</span><button id="next" type="button" aria-label="Наступний слайд">&#8594;</button><button id="fs" type="button">На весь екран</button></div>
+<script>
+var S=[].slice.call(document.querySelectorAll('#deck>section')),i=0,deck=document.getElementById('deck');
+function fit(){var k=Math.min(innerWidth/1920,innerHeight/1080);deck.style.transform='scale('+k+')'}
+function go(n){i=Math.max(0,Math.min(S.length-1,n));S.forEach(function(s,j){s.classList.toggle('on',j==i)});document.getElementById('count').textContent=(i+1)+' / '+S.length;if(location.hash!='#'+(i+1))history.replaceState(null,'','#'+(i+1))}
+addEventListener('resize',fit);fit();
+go((parseInt(location.hash.slice(1))||1)-1);
+document.getElementById('prev').onclick=function(){go(i-1)};document.getElementById('next').onclick=function(){go(i+1)};
+document.getElementById('fs').onclick=function(){var d=document.documentElement;if(document.fullscreenElement)document.exitFullscreen();else if(d.requestFullscreen)d.requestFullscreen().catch(function(){})};
+addEventListener('keydown',function(e){if(['ArrowRight','PageDown',' ','Enter'].indexOf(e.key)>=0){e.preventDefault();go(i+1)}else if(['ArrowLeft','PageUp','Backspace'].indexOf(e.key)>=0){e.preventDefault();go(i-1)}else if(e.key=='Home')go(0);else if(e.key=='End')go(S.length-1)});
+var tx=null;addEventListener('touchstart',function(e){tx=e.touches[0].clientX},{passive:true});addEventListener('touchend',function(e){if(tx==null)return;var d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>50)go(i+(d<0?1:-1));tx=null});
+</script></body></html><!doctype html>
 <html lang="uk">
 <head>
 <meta charset="utf-8">
